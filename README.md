@@ -1,2 +1,2 @@
-# IndiaMap
-Clickable State wise Indian Map
+# Project Quarantine
+
