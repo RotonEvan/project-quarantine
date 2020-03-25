@@ -17,6 +17,7 @@ include('scrape.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- map css -->
   <link rel="stylesheet" href="./css/map.css">
+  <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, user-scalable=0;" />
 </head>
 
@@ -141,25 +142,18 @@ include('scrape.php');
 
     </div>
 
-    <div class="summary container center">
+    <div class="container center" style="margin-top:4vh;">
 
-      <div class="data" style="color: #16959c; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-        <!-- Promo Content 1 goes here -->
-        <p>Total Cases: <?php echo $tot; ?></p>
-      </div>
-      <div class="data" style="color: #c72224; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-        <!-- Promo Content 2 goes here -->
-        <p>Active Cases: <?php echo $tot_active; ?></p>
-      </div>
-      <div class="data" style="color: #19b526; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-        <!-- Promo Content 3 goes here -->
-        <p>Recovered: <?php echo $total['cured']; ?></p>
-      </div>
-      <div class="data" style="color: #009e6a; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-        <!-- Promo Content 3 goes here -->
-        <p>Deaths: <?php echo $total['death']; ?></p>
-      </div>
-
+      <p class="white-text">
+        <span class="tiny">TOTAL COUNTS</span><br/>
+        Total:&nbsp;<span id="total-cases"><?php echo $tot; ?></span>
+        <span class="muted">&#8226;</span>
+        &nbsp;ACTIVE:&nbsp;<span id="total-cases"><?php echo $tot_active; ?></span>
+        <span class="muted">&#8226;</span>
+        &nbsp;DEATHS:&nbsp;<span id="total-deaths"><?php echo $total['death']; ?></span>
+        <span class="muted">&#8226;</span>
+        &nbsp;RECOVERIES:&nbsp;<span id="total-recovered"><?php echo $total['cured']; ?></span>
+      </p>
     </div>
     <style media="screen">
       path:hover {
@@ -196,16 +190,16 @@ include('scrape.php');
 
 
 
-  <div class="footer blue-grey darken-3" style="background-color: #0e1214 !important">
+  <div class="footer blue-grey darken-4" style="">
     <div class="container">
-      <a class="grey-text text-lighten-4 modal-trigger" href="#modal1">More Information</a>
+      <a id="more-info-button" class="grey-text text-lighten-4 modal-trigger" href="#modal1">More Information</a>
     </div>
   </div>
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>More Information</h4>
-      <p style="font-size:small;">Source: <a href="https://www.mohfw.gov.in/">https://www.mohfw.gov.in/</a> | Ministry of Health & Family Welfare | Last updated: <span id="date"></span></p>
+      <p style="font-size:small;">Source: <a href="https://www.mohfw.gov.in/">https://www.mohfw.gov.in/</a> | Ministry of Health & Family Welfare | Last updated: <?php echo $time[1];?></p><br>
       <p>This website was developed by <strong>Saksham Bhushan</strong> and <strong>Debajyoti Haldar</strong>, two students at Indian Institute of Technology Bhilai.
         <br>
         The goal of this project is to provide a simple, interactive way to visualize the impact of COVID-19 in India. We wanted people to be able to see this as something that brings us all together. This is what India looks like today in terms of

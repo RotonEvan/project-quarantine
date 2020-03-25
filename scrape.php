@@ -13,7 +13,7 @@ preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)
 
 //echo "<pre>".print_r($matches,true);
 //preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="bottom">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches1);
-
+preg_match('/<p><strong>\(\*including foreign nationals, as on (.*?)\)<\/strong><\/p>/s',$page, $time);
 preg_match('/<td align="\'centre" width="91" valign="bottom"><strong>(?P<indian>[^"]*)<\/strong><\/td>\s+<td align="\'centre" width="90" valign="top">\s+<strong>(?P<foreign>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<cured>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<death>[^"]*)<\/strong>\s+<\/td>/s',$page, $total);
 $tot = (int)$total['indian'] + (int)$total['foreign'] + (int)$total['cured'] + (int)$total['death'];
 $tot_active = (int)$total['indian'] + (int)$total['foreign'];
