@@ -51,7 +51,7 @@ include('scrape.php');
   <main>
     <div class="container center" style="margin-top:3vh;">
       <svg class="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 695.70178 620" height="695.70178" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
+        xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 696 620" height="696" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
         <metadata id="metadata44">
           <rdf:RDF>
             <cc:Work rdf:about="">
@@ -140,7 +140,7 @@ include('scrape.php');
       <div class="description"></div>
 
     </div>
-<div class="container">
+<div class="container summary">
     <div class="container" style=" position: fixed !important; bottom: 5vh !important; margin:auto !important;">
 
       <p class="white-text center">

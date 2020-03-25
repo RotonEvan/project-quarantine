@@ -20,10 +20,10 @@ $TN = 17;
 $telan = 18;
 $chandi =19;
 $jnk =20;
-//$ladakh = 20;
-$UP = 21;
-$utt = 22;
-$WB = 23;
+$ladakh = 21;
+$UP = 22;
+$utt = 23;
+$WB = 24;
 
 $tri = 30;
 $nag =30;
@@ -31,7 +31,7 @@ $sik =30;
 
 $megh =30;
 $lak =30;
-$jnk =30;
+// $jnk =30;
 $jhar =30;
 $goa = 30;
 $dnh =30;
