@@ -16,6 +16,7 @@ preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)
 
 preg_match('/<td align="\'centre" width="91" valign="bottom"><strong>(?P<indian>[^"]*)<\/strong><\/td>\s+<td align="\'centre" width="90" valign="top">\s+<strong>(?P<foreign>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<cured>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<death>[^"]*)<\/strong>\s+<\/td>/s',$page, $total);
 $tot = (int)$total['indian'] + (int)$total['foreign'] + (int)$total['cured'] + (int)$total['death'];
+$tot_active = (int)$total['indian'] + (int)$total['foreign'];
 //echo "Total cases in India: ".$tot."<br> Indian Nationals:".$total['indian']."<br> Foreign Nationals:".$total['foreign']."<br> Cured:".$total['cured']."<br> Deaths:".$total['death'];
 if(curl_errno($curl)) // check for execution errors
 {

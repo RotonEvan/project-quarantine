@@ -143,19 +143,19 @@ include('scrape.php');
 
         <div class="data" style="color: #16959c; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
           <!-- Promo Content 1 goes here -->
-          <p>Total Cases: 534</p>
+          <p>Total Cases: <?php echo $tot; ?></p>
         </div>
         <div class="data" style="color: #c72224; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
           <!-- Promo Content 2 goes here -->
-          <p>Active Cases: 490</p>
+          <p>Active Cases: <?php echo $tot_active; ?></p>
         </div>
         <div class="data" style="color: #19b526; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
           <!-- Promo Content 3 goes here -->
-          <p>Recovered: 34</p>
+          <p>Recovered: <?php echo $total['cured']; ?></p>
         </div>
         <div class="data" style="color: #009e6a; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
           <!-- Promo Content 3 goes here -->
-          <p>Deaths: 10</p>
+          <p>Deaths: <?php echo $total['deaths']; ?></p>
         </div>
 
       </div>
