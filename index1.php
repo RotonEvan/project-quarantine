@@ -48,7 +48,7 @@ include('scrape.php');
 
   </section>
   <main>
-    <div class="container center">
+    <div class="container center" style="margin-top:3vh;">
       <!-- <?php //include("map.html");?> -->
       <svg class="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 695.70178 620" height="695.70178" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
@@ -139,27 +139,26 @@ include('scrape.php');
       </svg>
       <div class="description"></div>
 
-      <div class="summary">
+    </div>
 
-        <div class="data" style="color: #16959c; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-          <!-- Promo Content 1 goes here -->
-          <p>Total Cases: <?php echo $tot; ?></p>
-        </div>
-        <div class="data" style="color: #c72224; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-          <!-- Promo Content 2 goes here -->
-          <p>Active Cases: <?php echo $tot_active; ?></p>
-        </div>
-        <div class="data" style="color: #19b526; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-          <!-- Promo Content 3 goes here -->
-          <p>Recovered: <?php echo $total['cured']; ?></p>
-        </div>
-        <div class="data" style="color: #009e6a; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
-          <!-- Promo Content 3 goes here -->
-          <p>Deaths: <?php echo $total['deaths']; ?></p>
-        </div>
+    <div class="summary container center">
 
+      <div class="data" style="color: #16959c; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
+        <!-- Promo Content 1 goes here -->
+        <p>Total Cases: <?php echo $tot; ?></p>
       </div>
-
+      <div class="data" style="color: #c72224; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
+        <!-- Promo Content 2 goes here -->
+        <p>Active Cases: <?php echo $tot_active; ?></p>
+      </div>
+      <div class="data" style="color: #19b526; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
+        <!-- Promo Content 3 goes here -->
+        <p>Recovered: <?php echo $total['cured']; ?></p>
+      </div>
+      <div class="data" style="color: #009e6a; text-shadow: 1px 1px rgba(0, 0, 0, 0.6);">
+        <!-- Promo Content 3 goes here -->
+        <p>Deaths: <?php echo $total['death']; ?></p>
+      </div>
 
     </div>
     <style media="screen">
