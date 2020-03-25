@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- map css -->
-  <link rel="stylesheet" href="/css/map.css">
+  <link rel="stylesheet" href="./css/map.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -137,7 +137,33 @@
       <div class="description"></div>
 
 
+      <style media="screen">
+        path:hover {
+          fill: #888888;
+        }
+      </style>
 
+      <script type="text/javascript">
+        var description = $(".description");
+
+        $('.enabled').hover(function() {
+
+          $(this).attr("class", "enabled heyo");
+          (description).addClass('active');
+          (description).html($(this).attr('title') + "<br/><span>Active Cases: 57<br/>Recovered: 4<br/>Deaths: 1</span>");
+        }, function() {
+          (description).removeClass('active');
+        });
+
+        $(document).on('mousemove', function(e) {
+
+          (description).css({
+            left: e.pageX,
+            top: e.pageY - 70
+          });
+
+        });
+      </script>
 
     </div>
 
@@ -167,37 +193,11 @@
         <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makerslab.in/covid/&title=&summary=&source=https://makerslab.in/covid/">Share on Linkedin</a><br></p>
     </div>
     <div class="modal-footer">
-      <a href="" class="modal-close waves-effect btn-flat">OK</a>
+      <a href="" class="modal-close waves-effect waves-green btn-flat">OK</a>
     </div>
   </div>
 </body>
-<style media="screen">
-  path:hover {
-    fill: #888888;
-  }
-</style>
 
-<script type="text/javascript">
-  var description = $(".description");
-
-  $('.enabled').hover(function() {
-
-    $(this).attr("class", "enabled heyo");
-    (description).addClass('active');
-    (description).html($(this).attr('title') + "<br/><span>Active Cases: 57<br/>Recovered: 4<br/>Deaths: 1</span>");
-  }, function() {
-    (description).removeClass('active');
-  });
-
-  $(document).on('mousemove', function(e) {
-
-    (description).css({
-      left: e.pageX,
-      top: e.pageY - 70
-    });
-
-  });
-</script>
 <style>
   body {
     display: flex;
