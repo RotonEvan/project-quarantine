@@ -25,8 +25,7 @@ svg {
   /* margin-right: -2%; */
   position: relative;
   left: 5%;
-  /* height: 660px; */
-  transform: scale(1.1);
+  height: 100%;
 }
 
 .description {
@@ -39,6 +38,7 @@ svg {
   padding: 10px 15px;
   z-index: 5;
   height: 150px !important;
+  width: 200px !important;
   line-height: 30px;
   margin: 0 auto;
   color: #1a4161;
@@ -51,7 +51,7 @@ svg {
   display: none;
   text-align: left;
   float: right;
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .description span {
@@ -76,17 +76,14 @@ svg {
   border-right: 10px solid transparent;
   border-top: 10px solid white;
 } */
-@media only screen and (max-width: 660px) {
-  svg {
-    transform: scale(0.8);
-    left: 0;
-    margin-left: -17%;
-  }
+@media only screen and (max-width: 700px) {
+
   .description {
     font-size: 15px;
-    height: 100px;
+    height: 140px !important;
+    width: 160px !important;
   }
   .description span {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
