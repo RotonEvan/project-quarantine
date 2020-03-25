@@ -1,5 +1,6 @@
 html {
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 .heyo:hover {
@@ -19,27 +20,38 @@ main {
   /* height: 100%; */
 }
 
-svg {
-  margin-top: -2%;
-  margin: auto;
+.container {
+  height: auto !important;
+  width: 100% !important;
+}
+
+.map {
+  margin-top: 2% !important;
+  /* margin: auto; */
   /* margin-right: -2%; */
+  /* left: 5%; */
+  /* height: 100%; */
+  display: block;
   position: relative;
+  margin: auto;
   left: 5%;
-  height: 100%;
+  /* min-width: 100%; */
 }
 
 .description {
   pointer-events: none;
   position: absolute;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 10px 15px;
   z-index: 5;
-  height: 150px !important;
-  width: 200px !important;
-  line-height: 30px;
+  /* height: 137px !important;
+  width: 200px !important; */
+  min-height: 100px;
+  overflow: hidden;
+  line-height: 25px;
   margin: 0 auto;
   color: #1a4161;
   border-radius: 5px;
@@ -55,7 +67,7 @@ svg {
 }
 
 .description span {
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
   font-weight: normal;
 }
@@ -77,13 +89,34 @@ svg {
   border-top: 10px solid white;
 } */
 @media only screen and (max-width: 700px) {
-
+  .map {
+    max-width: 105% !important;
+    max-height: 400px;
+  }
   .description {
     font-size: 15px;
-    height: 140px !important;
-    width: 160px !important;
+    min-width: 150px;
+    overflow: hidden;
   }
   .description span {
     font-size: 12px;
   }
+  .summary .data{
+    line-height: 0.1rem;
+    font-size: 1rem !important;
+  }
+}
+
+.summary {
+  margin: auto;
+  font-family: 'Baloo 2', cursive;
+}
+
+.summary .data{
+  display: inline-block;
+  margin-right: 3% !important;
+  margin: auto;
+  line-height: 0.1rem;
+  font-size: 2.2rem;
+  text-align: center;
 }
