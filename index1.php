@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include('scrape.php');
+?>
 <html lang="en" dir="ltr">
 
 <head>
@@ -172,7 +175,7 @@
 
         $(this).attr("class", "enabled heyo");
         (description).addClass('active');
-        (description).html($(this).attr('title') + "<br/><span>Active Cases: 57<br/>Recovered: 4<br/>Deaths: 1</span>");
+        (description).html($(this).attr('title'));
       }, function() {
         (description).removeClass('active');
       });
