@@ -159,6 +159,33 @@
 
 
     </div>
+    <style media="screen">
+      path:hover {
+        fill: #888888;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var description = $(".description");
+
+      $('.enabled').hover(function() {
+
+        $(this).attr("class", "enabled heyo");
+        (description).addClass('active');
+        (description).html($(this).attr('title') + "<br/><span>Active Cases: 57<br/>Recovered: 4<br/>Deaths: 1</span>");
+      }, function() {
+        (description).removeClass('active');
+      });
+
+      $(document).on('mousemove', function(e) {
+
+        (description).css({
+          left: e.pageX,
+          top: e.pageY - 70
+        });
+
+      });
+    </script>
 
 
 
