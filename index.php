@@ -34,8 +34,8 @@ include('scrape.php');
   <div class="navbar-fixed">
 
     <nav>
-      <div class="nav-wrapper blue-grey darken-3">
-        <a href="#" class="brand-logo covid" style="font-family: 'Baloo 2', cursive;">&nbsp&nbsp&nbsp&nbspCovid-19 | India</a>
+      <div class="nav-wrapper blue-grey darken-4">
+        <a href="#" class="brand-logo covid" style="font-family: 'Baloo 2', cursive;">&nbsp&nbspCovid-19 - India</a>
         <ul id="nav-mobile" class="right">
 
           <li><a class="dropdown-trigger" href="" data-target="dropdown1"><img src="share.svg" alt="" style="height:2.5vh; margin-bottom:-0.5vh;margin-top:2.5vh;"></a></li>
@@ -50,7 +50,6 @@ include('scrape.php');
   </section>
   <main>
     <div class="container center" style="margin-top:3vh;">
-      <!-- <?php //include("map.html");?> -->
       <svg class="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 695.70178 620" height="695.70178" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
         <metadata id="metadata44">
@@ -141,10 +140,10 @@ include('scrape.php');
       <div class="description"></div>
 
     </div>
+<div class="container">
+    <div class="container" style=" position: fixed !important; bottom: 5vh !important; margin:auto !important;">
 
-    <div class="container center" style="margin-top:4vh;">
-
-      <p class="white-text">
+      <p class="white-text center">
         <span class="tiny">TOTAL COUNTS</span><br/>
         Total:&nbsp;<span id="total-cases"><?php echo $tot; ?></span>
         <span class="muted">&#8226;</span>
@@ -152,9 +151,10 @@ include('scrape.php');
         <span class="muted">&#8226;</span>
         &nbsp;DEATHS:&nbsp;<span id="total-deaths"><?php echo $total['death']; ?></span>
         <span class="muted">&#8226;</span>
-        &nbsp;RECOVERIES:&nbsp;<span id="total-recovered"><?php echo $total['cured']; ?></span>
+        &nbsp;RECOVERIES:&nbsp;<span id="total-recovered"><?php echo $total['cured']; ?></span><br>
+        <span class="tiny">Click on a state to see cases, recoveries, deaths due to coronavirus.</span>
       </p>
-    </div>
+    </div></div>
     <style media="screen">
       path:hover {
         fill: #888888;
@@ -190,8 +190,8 @@ include('scrape.php');
 
 
 
-  <div class="footer blue-grey darken-4" style="">
-    <div class="container">
+  <div class="footer grey-darken-3">
+    <div class="container" style="opacity: 1 !important;">
       <a id="more-info-button" class="grey-text text-lighten-4 modal-trigger" href="#modal1">More Information</a>
     </div>
   </div>
@@ -213,7 +213,7 @@ include('scrape.php');
         <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://makerslab.in/covid/&title=&summary=&source=https://makerslab.in/covid/">Share on Linkedin</a><br></p>
     </div>
     <div class="modal-footer">
-      <a href="" class="modal-close waves-effect waves-green btn-flat">OK</a>
+      <a href="" class="modal-close waves-effect black-text btn-flat">OK</a>
     </div>
   </div>
 </body>
@@ -243,7 +243,7 @@ include('scrape.php');
     text-align: center;
     height: 6vh;
     padding-top: 1.5vh;
-    background-color: #0e1214 !important;
+
   }
 
   @media (max-width: 700px) {
