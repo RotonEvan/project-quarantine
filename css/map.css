@@ -1,6 +1,12 @@
 html {
   overflow-x: hidden;
   font-size: 16px;
+  max-width: 100%;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .heyo:hover {

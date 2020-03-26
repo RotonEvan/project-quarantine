@@ -28,9 +28,9 @@ if(curl_errno($curl)) // check for execution errors
 
 include('states_code.php');
 
-	for($i=0;$i<25;$i++)
+	for($i=0;$i<26;$i++)
 	{
-		if ($i == 20)
+		if ($i == 21)
 		{
 			$state_total[$i] = (int)$matches[2][$i]+(int)$matches[3][$i]+(int)$matches[4][$i]+(int)$matches[5][$i];
 			$state_active[$i] = (int)$matches[2][$i]+(int)$matches[3][$i];
@@ -40,14 +40,16 @@ include('states_code.php');
 			$state_total[$i-1] = $state_total[$i] + $state_total[$i-1];
 			$state_active[$i-1] = $state_active[$i] + $state_active[$i-1];
 			$states[$i-1] = "<br/><span>Total Cases: ".$state_total[$i-1]."<br/>Active Cases: ".$state_active[$i-1]." <br/>Cured: ".((int)$matches[4][$i]+(int)$matches[4][$i-1])." <br/>Deaths: ".((int)$matches[5][$i]+(int)$matches[5][$i-1])."</span>";
+			$color[$i-1] = (((int)$state_active[$i-1] / (int)$tot_active) * 2550);
 			continue;
 		}
 		$state_total[$i] = (int)$matches[2][$i]+(int)$matches[3][$i]+(int)$matches[4][$i]+(int)$matches[5][$i];
 		$state_active[$i] = (int)$matches[2][$i]+(int)$matches[3][$i];
 		$states[$i] = "<br/><span>Total Cases: ".$state_total[$i]."<br/>Active Cases: ".$state_active[$i]." <br/>Cured: ".$matches[4][$i]." <br/>Deaths: ".$matches[5][$i]."</span>";
-
+        $color[$i] = (((double)$state_active[$i] * 2550) / (double)$tot_active) + 50;
 	}
 	$states[30] = "<br/><span>Total Cases: 0<br/>Active Cases: 0 <br/>Cured: 0 <br/>Deaths: 0</span>";
+	$color[30] = 15;
 	$response = json_encode($matches);
 
 	$fp = fopen('results.json', 'w');
