@@ -11,7 +11,7 @@ $page = curl_exec($curl);
 
 //$states = array();
 
-preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign=".*?">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width=".*?" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches);
+preg_match_all('/<td align="\'centre" width="83" *.?align="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign=".*?">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width=".*?" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches);
 // echo "<pre>".print_r($matches,true);
 //echo "<pre>".print_r($matches,true);
 //preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="bottom">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches1);
@@ -28,7 +28,7 @@ if(curl_errno($curl)) // check for execution errors
 
 include('states_code.php');
 
-	for($i=0;$i<26;$i++)
+	for($i=0;$i<27;$i++)
 	{
 		if ($i == 21)
 		{
