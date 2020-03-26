@@ -1,44 +1,42 @@
 <?php
-$AP = 0;
-$bihar = 1;
-$cgh = 2;
-$del = 3;
-$goa = 4;
-$guj = 5;
-$har = 6;
-$HP = 7;
-$kar = 8;
-$keral = 9;
-$MP = 10;;
-$mah = 11;
-$mani = 12;
-$miz =13;
-$odi = 14;
-$pudu = 15;
-$punjab = 16;
-$raj = 17;
-$TN = 18;
-$telan = 19;
-$chandi =20;
-$jnk =21;
-$ladakh = 22;
-$UP = 23;
+$ani =0;
+$AP = 1;
+$bihar = 2;
+$chandi = 3;
+$cgh = 4;
+$del = 5;
+$goa = 6;
+$guj = 7;
+$har = 8;
+$HP = 9;
+$jnk =10;
+$kar = 11;
+$keral = 12;
+$ladakh = 13;
+$MP = 14;
+$mah = 15;
+$mani = 16;
+$miz =17;
+$odi = 18;
+$pudu = 19;
+$punjab = 20;
+$raj = 21;
+$TN = 22;
+$telan = 23;
 $utt = 24;
-$WB = 25;
+$UP = 25;
+$WB = 26;
 
 $tri = 30;
 $nag =30;
 $sik =30;
-
 $megh =30;
 $lak =30;
-//$jnk =30;
 $jhar =30;
-//$goa = 30;
 $dnh =30;
 $dnd =30;
 $assam =30;
 $arun =30;
-$ani =30;
+
 
 ?>
