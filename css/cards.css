@@ -21,7 +21,7 @@
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  width: 80%;
+  /* width: 80%; */
   font-family: 'Baloo 2', cursive;
 }
 .cards__item {
@@ -118,4 +118,31 @@
 
 strong {
   font-weight: bold;
+}
+
+.know-more {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  transition: all 0.5s;
+  transform: translateX(0);
+}
+
+
+
+.arrow {
+  position: relative;
+  top: 0.17rem;
+}
+
+.know-more:hover {
+  transform: translateX(-5px);
+  transition: all 0.5s;
+}
+
+.know-more:hover .arrow{
+  transform: translateX(2px);
+  transition: all 0.5s;
 }
