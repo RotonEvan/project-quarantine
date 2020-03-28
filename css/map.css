@@ -61,12 +61,12 @@ main {
   line-height: 25px;
   margin: 0 auto;
   color: #1a4161;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px #eee;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  border-radius: 0px 5px 5px 5px;
+  box-shadow: 0 0 0 0px #eee;
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
   display: none;
   text-align: left;
   float: right;

@@ -180,7 +180,7 @@ include('scrape.php');
 
         (description).css({
           left: e.pageX,
-          top: e.pageY - 70
+          top: e.pageY
         });
 
       });
