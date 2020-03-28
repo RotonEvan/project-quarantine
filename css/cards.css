@@ -144,5 +144,25 @@ strong {
 
 .know-more:hover .arrow{
   transform: translateX(2px);
-  transition: all 0.5s;
+  transition: all 0.5s  ;
+}
+
+.modal {
+  font-family: 'Baloo 2', cursive;
+  /* padding: auto 0; */
+}
+
+.modal img{
+  width: 100%;
+  margin: 1.8rem auto;
+  /* position: relative; */
+}
+
+.modal .modal-content {
+  margin: auto;
+  padding: 0;
+}
+
+.modal .modal-close {
+  padding-right: 0;
 }
