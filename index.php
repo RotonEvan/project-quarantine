@@ -210,7 +210,7 @@ include('scrape.php');
         <br>
         The data is from Ministry of Health & Family Welfare real-time updates. The TODAY cases/deaths are based on GMT (+0530).
         <br>
-        If you have questions, suggestions, or feedback, please send us an email. <a href="mailto:sakshamb@iitbhilai.ac.in">Here!</a> <br><br>
+        If you have questions, suggestions, or feedback, please send us an email at <a href="mailto:mailus@covidvsindia.in.net">mailus@covidvsindia.in.net</a> <br><br>
         <a href="https://facebook.com/sharer/sharer.php?u=https://covidvsindia.in.net">Share on Facebook</a><br>
         <a href="https://twitter.com/intent/tweet/?text=&url=https://covidvsindia.in.net">Share on Twitter</a><br>
         <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://covidvsindia.in.net/&title=&summary=&source=https://covidvsindia.in.net/">Share on Linkedin</a><br></p>
