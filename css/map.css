@@ -70,7 +70,7 @@ main {
   display: none;
   text-align: left;
   float: right;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.15);
 }
 
 .description span {
