@@ -104,6 +104,12 @@
 .card__image--roti {
   background-image: url("../res/roti.jpg");
 }
+.card__image--goonj {
+background-image:url("../res/goonj.jpg");
+}
+.card__image--feeding {
+background-image:url("../res/feeding.jpg");
+}
 .card__title {
   color: #696969;
   font-size: 1.5rem;

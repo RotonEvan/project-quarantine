@@ -56,21 +56,17 @@ include('header.php');
           </div>
         </div>
       </li>
-
       <li class="cards__item">
         <div class="card">
-          <div class="card__image card__image--river"></div>
+          <div class="card__image card__image--goonj"></div>
           <div class="card__content">
-            <div class="card__title">Joymakers - Jamshedpur</div><br>
-            <p class="card__text">They have taken the initiative to help the people who are out of food.
-              They are feeding hundreds of people in Jamshedpur and are trying to reach more outskirts.
-              Your support and the contribution will be of great help.
-            </p>
-            <a class="waves-effect waves-light modal-trigger know-more" href="#modal3">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
+            <div class="card__title">Goonj Foundation</div><br>
+            <p class="card__text">This NGO aims at providing 100000 hand wash, 100000 sanitizers, and deliver a month-long food supply to 50000 people with the funds they raise for homeless people.</p>
+            <a class="waves-effect waves-light modal-trigger know-more" href="#modal7">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
           </div>
         </div>
-
       </li>
+
       <li class="cards__item">
         <div class="card">
           <div class="card__image card__image--record"></div>
@@ -103,27 +99,29 @@ include('header.php');
           </div>
         </div>
       </li>
-    </ul><br><br>
-  </div>
+
 
   <li class="cards__item">
     <div class="card">
-      <div class="card__image " style="background-image:url("../res/roti.jpg");"></div>
+      <div class="card__image card__image--feeding"></div>
       <div class="card__content">
-        <div class="card__title">Goonj Foundation</div><br>
-        <p class="card__text">This NGO aims at providing 100000 hand wash, 100000 sanitizers, and deliver a month-long food supply to 50000 people with the funds they raise for homeless people.</p>
-        <a class="waves-effect waves-light modal-trigger know-more" href="#modal5">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
+        <div class="card__title">Zomato Feeding India</div><br>
+        <p class="card__text">It’s a nonprofit started by Zomato to provide dietary support to underprivileged families and a reliable supply of meals in the absence of employment opportunities. Each meal kit (for a family of five) contains a combination of wheat flour, rice and two types of pulses that can be used for a week’s meals. Each kit costs Rs 500. All amounts donated are used to procure the essentials and distribute the kits to families of daily wage earners across 26 cities.
+          </p>
+        <a class="waves-effect waves-light modal-trigger know-more" href="#modal8">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
       </div>
     </div>
   </li>
-
   <li class="cards__item">
     <div class="card">
-      <div class="card__image card__image--roti"></div>
+      <div class="card__image card__image--river"></div>
       <div class="card__content">
-        <div class="card__title">Khushiyaan Foundation</div><br>
-        <p class="card__text">Through its ‘Roti Ghar’ initiative, the foundation provides healthy and freshly cooked meals to children on the streets once a day. The team visits the adopted slums across Mumbai and has completed a year of feeding the underprivileged kids. Since the COVID-19 outbreak, Khushiyaan has been providing meals to security guards, labourers and daily wage earners around Mumbai, Thane, Airoli and Bhiwandi through Roti Ghar.<br></p>
-        <a class="waves-effect waves-light modal-trigger know-more" href="#modal6">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
+        <div class="card__title">Joymakers - Jamshedpur</div><br>
+        <p class="card__text">They have taken the initiative to help the people who are out of food.
+          They are feeding hundreds of people in Jamshedpur and are trying to reach more outskirts.
+          Your support and the contribution will be of great help.
+        </p>
+        <a class="waves-effect waves-light modal-trigger know-more" href="#modal3">Know More&nbsp<span class="material-icons arrow">arrow_right_alt</span></a>
       </div>
     </div>
   </li>
@@ -192,7 +190,7 @@ Donations to this fund will be exempted from income tax under section 80(G). <br
         <h4>YUVA - Youth for Unity and Voluntary Action</h4>
         <p>This NGO has been giving food to the slum dwellers and needy individuals amid coronavirus outbreak. They conducted a survey recently and identified households which are in desperate need of help -- like families of icecream walas, garland makers, waste collectors etcetera. However, their food services have been affected by the strict lockdown in Mumbai.
         </p>
-        <a href="https://www.instagram.com/p/B-GmimZKDpc/"> Donate Now!</a>
+        <a href="https://www.instagram.com/p/B-GmimZKDpc/"> <strong>Donate Now!</strong></a>
       </div>
       <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -207,7 +205,7 @@ Donations to this fund will be exempted from income tax under section 80(G). <br
       <div class="modal-content">
         <h4>Uday Foundation</h4>
         <p>Homeless are hardly aware of the dangers of Coronavirus and the solutions available to fight against it. The current Coronavirus (Covid-19) outbreak continues to spread, with growing numbers of confirmed cases in India. This makes lakhs of homeless living on the streets with lack of ability to self- quarantine, access to medical care acutely vulnerable. Uday Foundation is providing all necessary help and services to this vulnerable section of the society in the time of crisis.
-          <a href="https://www.udayfoundation.org/coronavirus-disease-covid-19/"> Donate Now!</a>
+          <br><a href="https://www.udayfoundation.org/coronavirus-disease-covid-19/"> <strong>Donate Now!</strong></a>
         </p>
       </div>
       <div class="modal-footer">
@@ -223,7 +221,7 @@ Donations to this fund will be exempted from income tax under section 80(G). <br
         <h4>Khushiyaan Foundation</h4>
         <p>Through its ‘Roti Ghar’ initiative, the foundation provides healthy and freshly cooked meals to children on the streets once a day. The team visits the adopted slums across Mumbai and has completed a year of feeding the underprivileged kids. Since the COVID-19 outbreak, Khushiyaan has been providing meals to security guards, labourers and daily wage earners around Mumbai, Thane, Airoli and Bhiwandi through Roti Ghar.<br>
 Make donations to 9769181218 via Paytm or Google Pay.
-          <a href="https://www.facebook.com/rotigharofficial/"> Visit Now!</a>
+          <br><a href="https://www.facebook.com/rotigharofficial/"> Visit Now!</a>
         </p>
       </div>
       <div class="modal-footer">
@@ -238,7 +236,7 @@ Make donations to 9769181218 via Paytm or Google Pay.
       <div class="modal-content">
         <h4>Goonj Foundation</h4>
         <p>The NGO has started a project called Rahat Covid-19 that has identified a large number of daily wagers who are out of jobs and trying to return to their villages. A lot of them are stuck in cities with hardly any resources. Besides reaching out to them and helping them with their primary requirements, Goonj is also gearing up to take on the aftermath of this pandemic.
-          <a href="https://goonj.org/contribute_old/paymentForm.php?purpose=Rahat-COVID-19&amount=blank"> Donate Now!</a>
+          <br><a href="https://goonj.org/contribute_old/paymentForm.php?purpose=Rahat-COVID-19&amount=blank"> <strong>Donate Now!</strong></a>
         </p>
       </div>
       <div class="modal-footer">
@@ -253,7 +251,7 @@ Make donations to 9769181218 via Paytm or Google Pay.
       <div class="modal-content">
         <h4>Zomato Feeding India</h4>
         <p>It’s a nonprofit started by Zomato to provide dietary support to underprivileged families and a reliable supply of meals in the absence of employment opportunities. Each meal kit (for a family of five) contains a combination of wheat flour, rice and two types of pulses that can be used for a week’s meals. Each kit costs Rs 500. All amounts donated are used to procure the essentials and distribute the kits to families of daily wage earners across 26 cities.
-          <a href="https://www.feedingindia.org/donate"> Donate Now!</a>
+          <br><a href="https://www.feedingindia.org/donate"> <strong>Donate Now!</strong></a>
         </p>
       </div>
       <div class="modal-footer">

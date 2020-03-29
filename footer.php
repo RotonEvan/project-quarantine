@@ -85,6 +85,10 @@ $(document).ready(function() {
   $(".dropdown-trigger").dropdown({
     'constrainWidth': false,
   });
+ $('#modal_don').modal('open');
+$('#cls').click(function(){
+    $('#modal_don').modal('close');
+});
   let bannerNode = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
   bannerNode.parentNode.removeChild(bannerNode);
 });
