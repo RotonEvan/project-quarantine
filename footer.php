@@ -10,8 +10,8 @@
 <div id="modal1" class="modal">
   <div class="modal-content">
     <h4>More Information</h4>
-    <p style="font-size:small;">Source: <a href="https://www.mohfw.gov.in/">https://www.mohfw.gov.in/</a> | Ministry of Health & Family Welfare | Last updated: <?php echo $time[1];?></p><br>
-    <p>This website was developed by <strong>Saksham Bhushan</strong> and <strong>Debajyoti Haldar</strong>, two students at Indian Institute of Technology Bhilai.
+    <p style="font-size:small;">Source: <a href="https://covid19india.org/">Covid19india</a> | Ministry of Health & Family Welfare | Last updated: <?php echo $array['statewise'][0]['lastupdatedtime'];?></p><br>
+    <p>This website was developed by <strong><a href="https://www.linkedin.com/in/sakshambhushan/">Saksham Bhushan</a></strong> and <strong><a href="https://www.linkedin.com/in/debajyoti-halder-19a95a17a/">Debajyoti Haldar</a></strong>, two students at Indian Institute of Technology Bhilai.
       <br>
       The goal of this project is to provide a simple, interactive way to visualize the impact of COVID-19 in India. We wanted people to be able to see this as something that brings us all together. This is what India looks like today in terms of
       effect of Coronavirus, we have to be careful and responsible as a citizen of this country and help make this situation better.
@@ -43,7 +43,31 @@ main {
 @media (min-width: 700px) {
   .brand-logo {
     margin-left:10px !important;
+    transform:translate(0%,2px) !important;
   }
+}
+*.icon-blue {color: #0088cc}
+*.icon-grey {color: grey}
+i {
+    width:10px;
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+}
+.badge:after{
+    content:"new";
+    position: absolute;
+    background: rgba(255,0,0,1);
+    height:1rem;
+    top:1rem;
+    right:1.5rem;
+    width:1rem;
+    text-align: center;
+    line-height: 2rem;;
+    font-size: 1rem;
+    border-radius: 50%;
+    color:white;
+    transform: translateX(270%);
 }
 </style>
 

@@ -20,7 +20,8 @@ include('scrape.php');
   <!-- map css -->
   <link rel="stylesheet" href="./css/map.css">
   <link rel="stylesheet" href="./css/style.css">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-width=1, user-scalable=yes;" />
+  <link rel="stylesheet" href="./css/donate.css">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-width=1, maximum-scale=6.0, user-scalable=1.0;" />
   <!--<meta name="viewport" content="width=device-width, initial-width=2, user-scalable=yes"/>-->
 </head>
 
@@ -38,9 +39,12 @@ include('scrape.php');
 
     <nav>
       <div class="nav-wrapper blue-grey darken-4">
-        <a href="" class="brand-logo" style="font-family: 'Baloo 2', cursive;font-size:140%;transform:translate(-50%,2px);">Covid <span class="tiny">vs</span> India</a>
-        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right">
+        <a href="index.php" class="brand-logo" style="font-family: 'Baloo 2', cursive;font-size:140%;transform:translate(-50%,2px);">Covid <span class="tiny">vs</span> India</a>
+        <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons icon-grey badge">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="donate.php">Donate <span class="new badge red" data-badge-caption="">New</span></a></li>
+          <li><a href="faq.php">FAQs on COVID-19</a></li></ul><ul class="right">
           <li><a class="dropdown-trigger" href="" data-target="dropdown1"><img src="share.svg" alt="" style="height:2.5vh; margin-bottom:-0.5vh;margin-top:2vh;"></a></li>
         </ul>
       </div>
@@ -48,7 +52,7 @@ include('scrape.php');
   </div>
   <ul class="sidenav" id="mobile-demo">
 <li><a href="index.php">Home</a></li>
-<li><a href="donate.php">Donate</a></li>
+<li><a href="donate.php">Donate<span class="new badge red" data-badge-caption="">New</span></a></li>
 <li><a href="faq.php">FAQs on COVID-19</a></li>
 <li><a>Share covidvsindia.in.net</a>
   <ul>

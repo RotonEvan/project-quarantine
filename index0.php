@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+include('scrape2.php');
 ?>
   <main>
     <div class="container center" style="margin-top:3vh;">

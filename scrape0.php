@@ -1,6 +1,6 @@
 <?php
-$url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSc_2y5N0I67wDU38DjDh35IZSIS30rQf7_NYZhtYYGU1jJYT6_kDx4YpF-qw0LSlGsBYP8pqM_a1Pd/pubhtml";
-//$url = "./test.html";
+//error_reporting(0);
+$url = "https://www.mohfw.gov.in/";
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
@@ -11,22 +11,20 @@ $page = curl_exec($curl);
 
 //$states = array();
 
-preg_match_all('/<tr style=.*?><th id="1896310216R1" style="height: 20px;" class="row-headers-background row-header-shim"><div class="row-header-wrapper" style="line-height: 20px;">.*?<\/div><\/th><td class="s43">Total<\/td><td class="freezebar-cell"><\/td><td class="s44">(?P<tot>[^"]*)<\/td><td class="s44">(?P<rec>[^"]*)<\/td><td class="s44">(?P<death>[^"]*)<\/td><td class="s44">(?P<act>[^"]*)<\/td><td class="s45" dir="ltr">.*?<\/td><\/tr>/s', $page, $total);
-echo print_r($total);
+preg_match_all('/<td align="\'centre" width="83" *.?align="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign=".*?">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width=".*?" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches);
+// echo "<pre>".print_r($matches,true);
+//echo "<pre>".print_r($matches,true);
+//preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="bottom">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches1);
+preg_match('/<p><strong>\(\*including foreign nationals, as on (.*?)\)<\/strong><\/p>/s',$page, $time);
+preg_match('/<td align="\'centre" width="91" valign="bottom"><strong>(?P<indian>[^"]*)<\/strong><\/td>\s+<td align="\'centre" width="90" valign="top">\s+<strong>(?P<foreign>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<cured>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<death>[^"]*)<\/strong>\s+<\/td>/s',$page, $total);
+$tot = (int)$total["indian"] + (int)$total["foreign"];
+$tot_active = (int)$total['indian'] + (int)$total['foreign'] - (int)$total["cured"] - (int)$total["death"];
+//echo "Total cases in India: ".$tot."<br> Indian Nationals:".$total['indian']."<br> Foreign Nationals:".$total['foreign']."<br> Cured:".$total['cured']."<br> Deaths:".$total['death'];
 if(curl_errno($curl)) // check for execution errors
 {
 	echo 'Scraper error: ' . curl_error($curl);
 	exit;
 }
-die;
-//echo "<pre>".print_r($matches,true);
-//preg_match_all('/<td align="\'centre" width="83" valign="bottom">(?P<name>[^"]*)<\/td>\s+<td align="\'centre" width="91" valign="bottom">(?P<indian>[^"]*)<\/td>\s+<td align="\'centre" width="90" valign="top">(?P<foreign>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="bottom">(?P<cured>[^"]*)<\/td>\s+<td align="\'centre" width="83" valign="top">(?P<death>[^"]*)<\/td>/s', $page, $matches1);
-preg_match('/<p><strong>\(\*including foreign nationals, as on (.*?)\)<\/strong><\/p>/s',$page, $time);
-preg_match('/<td align="\'centre" width="91" valign="bottom"><strong>(?P<indian>[^"]*)<\/strong><\/td>\s+<td align="\'centre" width="90" valign="top">\s+<strong>(?P<foreign>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<cured>[^"]*)<\/strong>\s+<\/td>\s+<td align="\'centre" width="83" valign="top">\s+<strong>(?P<death>[^"]*)<\/strong>\s+<\/td>/s',$page, $tota);
-$tot = (int)$total["indian"] + (int)$total["foreign"];
-$tot_active = (int)$total['indian'] + (int)$total['foreign'] - (int)$total["cured"] - (int)$total["death"];
-//echo "Total cases in India: ".$tot."<br> Indian Nationals:".$total['indian']."<br> Foreign Nationals:".$total['foreign']."<br> Cured:".$total['cured']."<br> Deaths:".$total['death'];
-
 
 include('states_code.php');
 

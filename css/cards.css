@@ -101,6 +101,9 @@
 .card__image--fence {
   background-image: url("../res/pm-cares-fund.jpg");
 }
+.card__image--roti {
+  background-image: url("../res/roti.jpg");
+}
 .card__title {
   color: #696969;
   font-size: 1.5rem;
@@ -148,21 +151,21 @@ strong {
 }
 
 .modal {
-  font-family: 'Baloo 2', cursive;
-  /* padding: auto 0; */
+  font-family: 'Baloo 2', cursive !important;
+  padding: auto 10px;
 }
 
 .modal img{
   width: 100%;
-  margin: 1.8rem auto;
-  /* position: relative; */
+  margin: 1.8rem auto !important;
+  position: relative !important;
 }
 
 .modal .modal-content {
-  margin: auto;
-  padding: 0;
+  margin: auto !important;
+  padding: 25px !important;
 }
 
 .modal .modal-close {
-  padding-right: 0;
+  padding-right: 10px !important;
 }
