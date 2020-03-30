@@ -2,6 +2,11 @@
 error_reporting(0);
 $strJsonFileContents = file_get_contents("https://api.covid19india.org/data.json");
 $array = json_decode($GLOBALS['strJsonFileContents'], true);
+
+$strJsonDistContents = file_get_contents("https://api.covid19india.org/state_district_wise.json");
+$dist_array = json_decode($GLOBALS['strJsonDistContents'], true);
+
+
 function findState($stateToFind){
   $flag=0;
   foreach ($GLOBALS['array']['statewise'] as $i => $state) {
@@ -63,4 +68,46 @@ function jnk(){
 }
 //jnk();
 //findState('Uttar Pradesh');
+function findDistrict($group, $district) {
+  $flag=0;
+  if(isset($GLOBALS['dist_array'][$group]['districtData'][$district])) {
+//   echo $group.' '.$district.' Confirmed: '.$GLOBALS['dist_array'][$group]['districtData'][$district]['confirmed'];
+   echo "<br/><span>Total Cases: ".$GLOBALS['dist_array'][$group]['districtData'][$district]['confirmed']."</span>";
+   $flag=1;
+  }
+  if($flag==0)
+  { echo "error with ".$group.' '.$district;}
+}
+//findDistrict('Kerala', 'Ernakulam');
+
+function yoyo($distname){
+
+  foreach ($GLOBALS['dist_array'] as $group) {
+    //print_r($group['districtData']['Lucknow']);
+    $flag=0;
+    if(isset($group['districtData'][$distname])){
+      $flag=1;
+      $confirm = $group['districtData'][$distname]['confirmed'];
+        if($confirm>=45)
+        {$color = '255, 8, 0';}
+        else if($confirm>=30 && $confirm<45)
+        {$color = '220, 8, 0';}
+        else if($confirm>=16 && $confirm<30)
+        {$color = '190, 8, 0';}
+        else if($confirm>=8 && $confirm<16)
+        {$color = '150, 8, 0';}
+        else if($confirm>=1 && $confirm<8)
+        {$color = '110, 8, 0';}
+        else if($confirm==0)
+        {$color = '30, 8, 0';}
+
+    echo 'title="'.$distname.'<br/><span>Total Cases: '.$confirm.'</span> " style="fill:rgb('.$color.')"';
+  }
+  }
+    if($flag==0)
+      echo 'title="'.$distname.'<br/><span>Total Cases: 0</span> " style="fill:rgb(30,8,0)"';
+}
+//yoyo('Lucknow');
+
+
 ?>

@@ -28,7 +28,36 @@ include('header.php');
     </div>
   </div>
   <main>
-    <div class="container center" style="margin-top:3vh;">
+    <div class="container center" style="margin-top:1vh;">
+    <div class="switch">
+      <label >
+        State-Wise
+        <input type="checkbox" id="mycheck" onclick="changeMap()">
+        <span class="lever red"></span>
+        District-Wise
+      </label>
+    </div>
+    </div>
+    <style media="screen">
+    .switch label input[type=checkbox]:checked+.lever:after {
+      background-color: #ffffff;
+      }
+    </style>
+    <script type="text/javascript">
+    function changeMap(){
+      if(document.getElementById("mycheck").checked == true)
+      {
+        document.getElementById("mapStat").style.display = "none";
+        document.getElementById("mapDist").style.display = "";
+      }
+      else {
+        document.getElementById("mapDist").style.display = "none";
+        document.getElementById("mapStat").style.display = "";
+      }
+    }
+    </script>
+
+    <div class="container center" style="margin-top:3vh; transition: all 2s ease 0s;" id="mapStat">
       <svg class="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 696 620" height="696" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
         <metadata id="metadata44">
@@ -116,7 +145,35 @@ include('header.php');
         </path>
 
       </svg>
+      <script type="text/javascript">
+
+        var description = $(".description");
+
+        $('.enabled').hover(function() {
+
+          $(this).attr("class", "enabled heyo");
+          (description).addClass('active');
+          (description).html($(this).attr('title'));
+        }, function() {
+          (description).removeClass('active');
+        });
+
+        $(document).on('mousemove', function(e) {
+
+          (description).css({
+            left: e.pageX,
+            top: e.pageY
+          });
+
+        });
+      </script>
+    </div>
       <div class="description"></div>
+    <div style="margin:0vh 2vh 0vh 2vh;transition: all 2s ease 0s; display:none;" id="mapDist" >
+
+      <?php
+      include('india_districts.php');
+      ?>
 
     </div>
 <div class="container summary">
@@ -140,28 +197,7 @@ include('header.php');
       }
     </style>
 
-    <script type="text/javascript">
 
-      var description = $(".description");
-
-      $('.enabled').hover(function() {
-
-        $(this).attr("class", "enabled heyo");
-        (description).addClass('active');
-        (description).html($(this).attr('title'));
-      }, function() {
-        (description).removeClass('active');
-      });
-
-      $(document).on('mousemove', function(e) {
-
-        (description).css({
-          left: e.pageX,
-          top: e.pageY
-        });
-
-      });
-    </script>
 
 
 

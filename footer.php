@@ -94,5 +94,5 @@ $('#cls').click(function(){
 });
 
 </script>
-
+<script src="./js/district_data.js"></script>
 </html>
