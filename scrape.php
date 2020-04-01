@@ -11,7 +11,7 @@ function findState($stateToFind){
   $flag=0;
   foreach ($GLOBALS['array']['statewise'] as $i => $state) {
     if($state['state']==$stateToFind) {
-      echo "<br/><span>Total Cases: ".$state['confirmed']."<br/>Active Cases: ".$state['active']." <br/>Recovered: ".$state['recovered']." <br/>Deaths: ".$state['deaths']."</span>";;
+      echo "<br/><span>Total Cases: ".$state['confirmed']."<br/>Active Cases: ".$state['active']."<span class=\'tiny\'> (".round((int)$state['active']/(int)$state['confirmed']*100,2)."%)</span> <br/>Recovered: ".$state['recovered']."<span class=\'tiny\'> (".round((int)$state['recovered']/(int)$state['confirmed']*100,2)."%)</span> <br/>Deaths: ".$state['deaths']."<span class=\'tiny\'> (".round((int)$state['deaths']/(int)$state['confirmed']*100,2)."%)</span></span>";;
       $flag=1;
     }
   }
