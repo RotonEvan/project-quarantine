@@ -57,9 +57,9 @@ include('header.php');
     }
     </script>
 
-    <div class="container center" style="margin-top:3vh; transition: all 2s ease 0s;" id="mapStat">
+    <div class="container center" style="margin-top:3vh;" id="mapStat">
       <svg class="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 696 620" height="696" width="620" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
+        xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" preserveAspectRatio="xMinYMin meet" viewBox="0 0 700 700" height="600" width="600" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
         <metadata id="metadata44">
           <rdf:RDF>
             <cc:Work rdf:about="">
@@ -169,7 +169,7 @@ include('header.php');
       </script>
     </div>
       <div class="description"></div>
-    <div style="margin:0vh 2vh 0vh 2vh;transition: all 2s ease 0s; display:none;" id="mapDist" >
+    <div style="margin:3vh 8vh 0vh 0vh; display:none;" id="mapDist" >
 
       <?php
       include('india_districts.php');

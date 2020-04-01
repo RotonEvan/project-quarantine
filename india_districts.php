@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" class="map" viewBox="100 200 900 1000" height="680" width="620" id="svg2">
+<svg xmlns="http://www.w3.org/2000/svg" class="map" viewBox="100 200 950 1000" height="600" width="600" id="svg2">
 
 
 <g title="Bihar">
