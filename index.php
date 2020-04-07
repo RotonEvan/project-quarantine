@@ -176,6 +176,19 @@ include('header.php');
       ?>
 
     </div>
+    <br><br>
+    <div class="container">
+      <div class="container" style=" padding-right:5%!important; padding-left:5%!important;">
+        <span style="padding:2% 2% 2% 2%;color:rgba(250,250,250,0.5);">Total Counts</span>
+        <canvas id="myChart" width="20" height="10" style="background-color:rgba(0,0,0,0.3);border-radius:15px;"></canvas>
+      </div>
+      <br>
+      <div class="container" style="padding:5% 5% 5% 5%!important;">
+        <span style="padding:2% 2% 2% 2%;color:rgba(250,250,250,0.5);">Daily Counts</span>
+        <canvas id="myChart2" width="20" height="10" style="background-color:rgba(0,0,0,0.3);border-radius:15px;"></canvas>
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
 <div class="container summary">
     <div class="container" style=" position: fixed !important; bottom: 5vh !important; margin:auto !important;">
 
@@ -214,6 +227,8 @@ include('header.php');
     background-size: cover;
   }
 </style>
+
   <?php
+        include('charts.php');
   include('footer.php');
   ?>

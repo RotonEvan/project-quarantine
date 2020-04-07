@@ -9,8 +9,3 @@ fetch(myRequest)
       mainobj = data;
   })
 }
-
-
-
-
-    //(description).html($(this).attr('style', "fill:rgba("+color+");"));
